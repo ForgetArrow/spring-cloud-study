@@ -1,4 +1,4 @@
-## Êı¾İ¿âÁ´½ÓÅäÖÃ
+## dev-æ•°æ®åº“é“¾æ¥é…ç½®
 mysqldb:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/db_spring_study?useUnicode=true&characterEncoding=UTF-8
