@@ -1,0 +1,6 @@
+spring:
+  output:
+    ansi:
+      enabled: detect
+  main:
+    banner-mode: console
