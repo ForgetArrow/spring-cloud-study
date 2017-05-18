@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: service-hello
+
+server:
+  port: 8672
+
+eureka:
+  client:
+    # 指定服务注册中心的位置
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    # 自我保护配置 ------ Begin
+    # Eureka一旦进入自我保护模式，Eureka Server将尝试保护其服务注册表中的信息，不再删除服务注册表中的数据（也就是不会注销任何微服务）
+    # 但开发过程中，我们常常希望Eureka Server能够迅速有效地踢出已关停的节点，可以关闭Eureka的自我保护
+    # Eureka Client方的处理如下（更改 Eureka 更新频率将打破服务器的自我保护功能，生产环境下不建议自定义这些配置。）：
+    # 开启健康检查（改配置只能配置在application.yml中，否则会有副作用，需要spring-boot-starter-actuator依赖）
+    healthcheck:
+      enabled: true
+  instance:
+    # 续约更新时间间隔（默认30秒），即 Eureka Client向Server发送心跳包的间隔时间
+    lease-renewal-interval-in-seconds: 10
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 20
+    # 自我保护配置 ------ End
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}

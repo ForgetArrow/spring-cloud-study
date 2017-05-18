@@ -1,0 +1,20 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    ## 通过 register-with-eureka:false和 fetch-registry:false 来表名自己是一个eureka server。
+    register-with-eureka: false # 是否将自己注册到Eureka Server，默认为true；由于当前这个应用就是Eureka Server，故而设为false。
+    fetch-registry: false # 是否从Eureka Server获取注册信息，默认为true；因为这是一个单点的Eureka Server，不需要同步其他的Eureka Server节点的数据，故而设为false。
+    service-url:
+      # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址，多个地址可使用 “,”分隔。
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    # Eureka一旦进入自我保护模式，Eureka Server将尝试保护其服务注册表中的信息，不再删除服务注册表中的数据（也就是不会注销任何微服务）
+    # 但开发过程中，我们常常希望Eureka Server能够迅速有效地踢出已关停的节点，可以关闭Eureka的自我保护
+    # Eureka Server 方的处理如下：
+    enable-self-preservation: false       # false-关闭自我保护
+    eviction-interval-timer-in-ms: 30000  # 清理间隔毫秒数（默认60*1000）
+
