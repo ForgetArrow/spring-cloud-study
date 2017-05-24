@@ -23,4 +23,5 @@ eureka:
     # 续约到期时间（默认90秒）
     lease-expiration-duration-in-seconds: 20
     # 自我保护配置 ------ End
+    # 以 IP:port 注册本服务
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
