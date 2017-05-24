@@ -1,4 +1,4 @@
-package com.king.ribbon.service;
+package com.king.rest_template.ribbon.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

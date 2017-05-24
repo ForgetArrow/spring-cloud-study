@@ -1,6 +1,6 @@
-package com.king.ribbon.controller;
+package com.king.rest_template.ribbon.controller;
 
-import com.king.ribbon.service.RibbonHelloService;
+import com.king.rest_template.ribbon.service.RibbonHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +15,7 @@ public class RibbonHelloController {
     @Autowired
     private RibbonHelloService helloService;
 
-    @RequestMapping("/hello")
+    @RequestMapping("/restHello")
     public String hello(@RequestParam String name) {
         return helloService.helloService(name);
     }

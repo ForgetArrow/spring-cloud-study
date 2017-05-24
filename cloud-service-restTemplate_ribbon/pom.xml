@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.king</groupId>
-    <artifactId>cloud-service-ribbon</artifactId>
+    <artifactId>cloud-service-restTemplate_ribbon</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
