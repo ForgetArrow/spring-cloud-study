@@ -11,3 +11,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+# 开启feign的hystrix熔断器(默认为false)
+feign:
+  hystrix:
+    enabled: true
