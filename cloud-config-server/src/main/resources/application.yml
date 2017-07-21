@@ -5,8 +5,15 @@ spring:
     config:
       server:
         git:
+          # 配置git仓库地址
           uri: https://github.com/ForgetArrow/spring-cloud-study.git
+          # 配置仓库路径
           search-paths: cloud-config-repo
+          # 访问git仓库的用户名
+          username: wang_fenghua@126.com
+          # 访问git仓库的用户密码
+          password: **********
+      # 配置仓库的分支
       label: master
   application:
     name: config-server
