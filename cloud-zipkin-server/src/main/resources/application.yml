@@ -2,4 +2,4 @@ server:
   port: 9411
 spring:
   application:
-    name: cloud-zipkin-server
+    name: zipkin-server
