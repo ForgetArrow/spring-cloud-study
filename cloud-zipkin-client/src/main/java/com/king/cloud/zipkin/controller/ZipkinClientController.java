@@ -15,8 +15,19 @@ public class ZipkinClientController {
     @Autowired
     private ZipkinClientService zipkinClientService;
 
-    @RequestMapping("/")
+    /**
+     * 使用 feign 方式访问service-hello服务
+     *
+     * @param name
+     * @return
+     */
+    @RequestMapping("/zipkin")
     public String sayHello(String name) {
         return zipkinClientService.sayHello(name);
+    }
+
+    @RequestMapping("visit")
+    public String directVisit(String name) {
+        return "hi " + name + ", Your're direct visit the server.";
     }
 }

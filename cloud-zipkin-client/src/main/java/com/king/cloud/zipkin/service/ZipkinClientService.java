@@ -13,5 +13,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ZipkinClientService {
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    String sayHello(@RequestParam String name);
+    String sayHello(@RequestParam(value = "name") String name);
 }
