@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author wangjinbo
  * @create 2017-08-09上午 11:44
  */
-@FeignClient("service-hello")
+@FeignClient("zipkin-client-hello")
 public interface ZipkinClientService {
 
-    @RequestMapping(value = "/hi", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello4Zipkin", method = RequestMethod.GET)
     String sayHello(@RequestParam(value = "name") String name);
 }
