@@ -13,9 +13,9 @@ import zipkin.server.EnableZipkinServer;
  */
 @SpringBootApplication
 @EnableZipkinServer
-public class ServerZipkinApplication {
+public class ZipkinServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerZipkinApplication.class, args);
+        SpringApplication.run(ZipkinServerApplication.class, args);
     }
 }
