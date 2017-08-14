@@ -15,8 +15,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ServiceHello4ZipkinApplication {
 
     public static void main(String[] args) {
-
-
         SpringApplication.run(ServiceHello4ZipkinApplication.class, args);
     }
 }

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.king</groupId>
-    <artifactId>cloud-service-hello-zipkin</artifactId>
+    <artifactId>cloud-zipkin-service-hello</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
