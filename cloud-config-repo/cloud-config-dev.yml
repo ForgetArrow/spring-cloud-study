@@ -1,5 +1,6 @@
 ## dev-数据库链接配置
 profile: dev
+foo: 嗯呐
 mysqldb:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/db_spring_study?useUnicode=true&characterEncoding=UTF-8
