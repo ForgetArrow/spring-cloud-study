@@ -10,13 +10,29 @@ spring:
           # 配置git仓库地址
           uri: https://github.com/ForgetArrow/spring-cloud-study.git
           # 配置仓库路径
-          search-paths: cloud-config-repo
-          # 访问git仓库的用户名
+          searchPaths: cloud-config-repo
+          # 访问git仓库的用户名，如果git仓库为公开仓库，可以不填用户名和密码，私有仓库需要填写
           username: wang_fenghua@126.com
           # 访问git仓库的用户密码
-          password: feng******
+          password: fenghua***
       # 配置仓库的分支
       label: master
+
+## http请求地址和资源文件映射如下:
+## /{application}/{profile}[/{label}]
+##    范例：cloud-config-dev.yml           映射： http://localhost:10121/cloud-config/dev[/master]
+
+## /{application}-{profile}.yml
+##    范例：cloud-config-test.yml           映射： http://localhost:10121/cloud-config-test.yml
+
+## /{label}/{application}-{profile}.yml
+##    范例：cloud-config-dev.yml           映射： http://localhost:10121/master/cloud-config-dev.yml
+
+## /{application}-{profile}.properties
+##    范例：config-client-pro.properties   映射： http://localhost:10121/master/config-client-pro.properties
+
+## /{label}/{application}-{profile}.properties
+##    范例：config-client-pro.properties   映射： http://localhost:10121/master/config-client-pro.properties
 
 eureka:
   instance:
