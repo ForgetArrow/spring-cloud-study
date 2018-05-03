@@ -3,6 +3,7 @@ server:
 
 spring:
   application:
+    # spring-cloud-config配置中心，要有以该name命名的properties或yml文件；如config-client-pro.properties，config-client-dev.yml
     name: config-client
 eureka:
   instance:

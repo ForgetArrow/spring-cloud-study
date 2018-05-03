@@ -3,6 +3,7 @@ spring:
     # 配置中心信息
     config:
       label: master
+      # 配合 spring.application.name 从 spring-cloud-config配置中心获取配置
       profile: dev
       # 注释该uri，通过discovery的enabled 和 service-id 从配置中心取，如果配置中心在eureak服务注册中心注册了多台实例，通过负载均衡实现高可用。
       # uri: http://localhost:10121
