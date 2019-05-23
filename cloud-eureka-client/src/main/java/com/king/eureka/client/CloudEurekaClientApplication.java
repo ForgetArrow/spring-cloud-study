@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class ServiceHelloApplication {
+public class CloudEurekaClientApplication {
 
     @Value("${server.port}")
     private String port;
@@ -27,6 +27,6 @@ public class ServiceHelloApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceHelloApplication.class, args);
+        SpringApplication.run(CloudEurekaClientApplication.class, args);
     }
 }
